@@ -23,7 +23,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        IMAGE=us-east1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/fastapi-my-repo/my-backend:${{ github.sha }}
+        IMAGE=us-east1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/my-repo/my-backend:${{ github.sha }}
         docker build -t $IMAGE .
         echo "IMAGE=$IMAGE" >> $GITHUB_ENV
 
